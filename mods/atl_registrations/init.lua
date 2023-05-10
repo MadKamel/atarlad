@@ -2,7 +2,7 @@ atl = {}
 
 atl.register_rock = function(nodename, nodedata)
 	minetest.register_node(":atl_rock:"..nodename, {
-		description = nodedata.description,
+		description = "Clean " .. nodedata.description,
 		tiles = {"atl_rock."..nodename.."_node.png"},
 		groups = {chisel = nodedata.hardness, rock = 1},
 		drop = "",
@@ -11,7 +11,7 @@ atl.register_rock = function(nodename, nodedata)
 		end,
 	})
 	minetest.register_node(":atl_rock:"..nodename.."_broken", {
-		description = nodedata.description,
+		description = "Chipped " .. nodedata.description,
 		tiles = {"atl_rock."..nodename.."_node_1.png"},
 		groups = {chisel = nodedata.hardness, broken_rock = 1},
 		drop = "",
@@ -20,7 +20,7 @@ atl.register_rock = function(nodename, nodedata)
 		end,
 	})
 	minetest.register_node(":atl_rock:"..nodename.."_gravel", {
-		description = nodedata.description,
+		description = "Gravel of " .. nodedata.description,
 		tiles = {"atl_rock."..nodename.."_node_gravel.png"},
 		groups = {shovel = 2, gravel = 1},
 		drop = "",
