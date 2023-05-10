@@ -28,6 +28,7 @@ atl.register_rock = function(nodename, nodedata)
 			minetest.set_node(pos, {name = ":atl_rock:"..nodename.."_gravel"})
 		end,
 	})
+end
 
 atl.register_wood = function(nodename, nodedata)
 	minetest.register_node(":atl_flora:"..nodename, {
@@ -129,3 +130,4 @@ atl.register_wood = function(nodename, nodedata)
 			}
 		}
 	})
+end
