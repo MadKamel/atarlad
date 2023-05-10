@@ -1,1 +1,1 @@
-minetest.register_alias("mapgen_stone", "atl_rock:granite")
+minetest.set_mapgen_setting("mg_name", "singlenode", true)
