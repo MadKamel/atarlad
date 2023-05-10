@@ -2,7 +2,7 @@ atl = {}
 
 atl.register_rock = function(nodename, nodedata)
 	minetest.register_node(":atl_rock:"..nodename, {
-		description = "Clean " .. nodedata.description,
+		description = nodedata.description,
 		tiles = {"atl_rock."..nodename..".png"},
 		groups = {rock = nodedata.hardness},
 		drop = "",
