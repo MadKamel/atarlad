@@ -1,6 +1,6 @@
 atl = {}
 
-atl.register_rock = function(nodename, type, nodedata)
+atl.register_rock = function(nodename, nodedata)
 	minetest.register_node(":atl_rock:"..nodename, {
 		description = nodedata.description,
 		tiles = {"atl_rock."..nodename.."_node.png"},
