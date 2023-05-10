@@ -55,9 +55,6 @@ atl.register_wood = function(nodename, nodedata)
 			}
 		}
 	})
-
-
-	})
 	minetest.register_node(":atl_flora:"..nodename.."_stripped", {
 		description = "Stripped "..nodedata.description.." Trunk",
 		groups = {wood = nodedata.hardness},
