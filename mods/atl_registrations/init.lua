@@ -30,12 +30,6 @@ atl.register_rock = function(nodename, nodedata)
 	})
 
 atl.register_wood = function(nodename, nodedata)
-	minetest.register_node(":atl_flora:"..nodename.."_plank", {
-		description = nodedata.description.." Planks",
-		tiles = {"atl_flora."..nodename.."_plank.png", "atl_flora."..nodename.."_plank.png", "atl_flora."..nodename.."_plank_cap.png", "atl_flora."..nodename.."_plank_cap.png", "atl_flora."..nodename.."_plank.png", "atl_flora."..nodename.."_plank.png"},
-		groups = {wood = nodedata.hardness},
-		paramtype2 = "facedir"
-	})
 	minetest.register_node(":atl_flora:"..nodename, {
 		description = nodedata.description.." Trunk",
 		tiles = {"atl_flora."..nodename..".png"},
