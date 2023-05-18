@@ -5,7 +5,7 @@ minetest.register_on_newplayer(function(player)
 end)
 
 minetest.register_on_generated(function(minp, maxp, seed)
-	minetest.set_node({x = 0, y = 0, z = 0}, {name = "atl_rock:granite"})
+	minetest.set_node({x = 0, y = 0, z = 0}, {name = "atl_terrain:loam"})
 end)
 
 minetest.register_on_joinplayer(function(player)
