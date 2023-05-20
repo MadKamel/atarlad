@@ -5,6 +5,13 @@ minetest.register_node("atl_terrain:loam", {
 	drop = ""
 })
 
+minetest.register_node("atl_terrain:leafy_loam", {
+	description = "Loam Soil",
+	tiles = {"atl_flora.loam_with_leaves.png"},
+	groups = {soil = 1},
+	drop = ""
+})
+
 
 minetest.register_node("atl_terrain:ocean_water_source", {
 	description = "Ocean Water Source",
