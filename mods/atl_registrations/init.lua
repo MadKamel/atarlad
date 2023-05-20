@@ -21,7 +21,7 @@ atl.register_rock = function(nodename, nodedata)
 		groups = {rock = nodedata.hardness},
 		drop = "",
 		after_dig_node = function(pos, oldnode, oldmetadata, digger)
-			minetest.set_node(pos, {name = ":atl_rock:"..nodename.."_broken"})
+			minetest.set_node(pos, {name = "atl_rock:"..nodename.."_broken"})
 		end,
 	})
 	minetest.register_node(":atl_rock:"..nodename.."_broken", {
@@ -30,17 +30,13 @@ atl.register_rock = function(nodename, nodedata)
 		groups = {rock = 1},
 		drop = "",
 		after_dig_node = function(pos, oldnode, oldmetadata, digger)
-			minetest.set_node(pos, {name = ":atl_rock:"..nodename.."_gravel"})
+			minetest.set_node(pos, {name = "atl_rock:"..nodename.."_gravel"})
 		end,
 	})
 	minetest.register_node(":atl_rock:"..nodename.."_gravel", {
 		description = "Gravel of " .. nodedata.description,
 		tiles = {"atl_rock."..nodename.."_gravel.png"},
-		groups = {gravel = 1},
-		drop = "",
-		after_dig_node = function(pos, oldnode, oldmetadata, digger)
-			minetest.set_node(pos, {name = ":atl_rock:"..nodename.."_gravel"})
-		end,
+		groups = {gravel = 1}
 	})
 end
 

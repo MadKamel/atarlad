@@ -14,7 +14,7 @@ minetest.register_decoration({
 	decoration = "atl_mapgen:acer_tree_1",
 	deco_type = "schematic",
 	schematic = minetest.get_modpath("atl_mapgen").."/schematics/acer_tree_1.mts",
-	place_on = "atl_terrain:leafy_loam",
+	place_on = "atl_terrain:loam",
 	flags = "place_center_x, place_center_z",
 	rotation = "random",
 	fill_ratio = 0.01,
@@ -36,8 +36,10 @@ minetest.register_on_generated(function(minp, maxp, seed)
 
 	local data = vm:get_data()
 
-	local c_dirt  = minetest.get_content_id("atl_terrain:loam")
-	local c_dirt2  = minetest.get_content_id("atl_terrain:leafy_loam")
+	local c_stone  = minetest.get_content_id("atl_rock:granite")
+	local c_sand  = minetest.get_content_id("atl_rock:granite_gravel")
+	local c_loam  = minetest.get_content_id("atl_terrain:loam")
+	local c_loam2  = minetest.get_content_id("atl_terrain:leafy_loam")
 	local c_water = minetest.get_content_id("atl_terrain:ocean_water_source")
 
 	local sidelen = maxp.x - minp.x + 1
@@ -54,12 +56,14 @@ minetest.register_on_generated(function(minp, maxp, seed)
 			for x = minp.x, maxp.x do
 				if nvals[ni] - (y - 25) / 55 > 0.5 then
 					local vi = a:index(x, y, z)
-					if y < 1 then
-						data[vi] = c_dirt
+					if y < -5 then
+						data[vi] = c_stone
+					elseif y < 1 then
+						data[vi] = c_sand
 					else
-						data[vi] = c_dirt2
+						data[vi] = c_loam
 					end
-					data[vi] = c_dirt
+
 					elseif y < 1 then
 						local vi = a:index(x, y, z)
 						data[vi] = c_water
