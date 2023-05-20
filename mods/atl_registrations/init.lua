@@ -1,4 +1,18 @@
+core.register_item(":", {
+	type = "none",
+	range = 9,
+	tool_capabilities = {
+		full_punch_interval = 0.9,
+		max_drop_level = 0,
+		groupcaps = {
+			breakable = {times = {[1] = 0.1}}
+		}
+	}
+})
+
 atl = {}
+
+
 
 atl.register_rock = function(nodename, nodedata)
 	minetest.register_node(":atl_rock:"..nodename, {
@@ -129,5 +143,12 @@ atl.register_wood = function(nodename, nodedata)
 				{-0.125, 0, 0.25, 0.125, 0.25, 0.5},
 			}
 		}
+	})
+	minetest.register_node(":atl_flora:"..nodename.."_leaves", {
+		description = nodedata.description.." Leaves",
+		tiles = {"atl_flora."..nodename.."_leaves.png"},
+		paramtype = "light",
+		drawtype = "allfaces_optional",
+		groups = {breakable = 1}
 	})
 end
