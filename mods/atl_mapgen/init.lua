@@ -11,7 +11,7 @@ end)
 
 
 minetest.register_decoration({
-	decoration = "atl_mapgen:acer_tree_1",
+	decoration = "atl_flora:acer_tree_1",
 	deco_type = "schematic",
 	schematic = minetest.get_modpath("atl_mapgen").."/schematics/acer_tree_1.mts",
 	place_on = "atl_terrain:loam",
@@ -19,6 +19,28 @@ minetest.register_decoration({
 	rotation = "random",
 	fill_ratio = 0.01,
 	sidelen = 10,
+	max_y = 25,
+	min_y = 10
+})
+
+--minetest.register_decoration({
+--	decoration = "atl_mapgen:granite_house_1",
+--	deco_type = "schematic",
+--	schematic = minetest.get_modpath("atl_mapgen").."/schematics/granite_house_1.mts",
+--	place_on = "atl_terrain:loam",
+--	flags = "place_center_x, place_center_z",
+--	rotation = "random",
+--	fill_ratio = 0.0001,
+--	sidelen = 10,
+--	max_y = 25,
+--	min_y = 1
+--}) --removed because house spawning is stupid and doesn't fit the idea of atarlad.
+
+minetest.register_decoration({
+	decoration = "atl_rock:granite_rock",
+	deco_type = "simple",
+	place_on = "atl_terrain:loam",
+	fill_ratio = 0.01,
 	max_y = 25,
 	min_y = 10
 })
